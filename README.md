@@ -17,6 +17,10 @@ source ~/$(your workspace)/devel/setup.bash
 ```
 rosrun rqt_dyros rqt_dyros
 ```
+<!> If your plugin does not show up under the Plugins menu when you launch rqt, you may need to run:
+```
+rqt --force-discover
+```
 
 ### Description
 * When you push the "Open", then the topic which has a name of "/open_push_button_pressed" and has a type of String is published once.
