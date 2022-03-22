@@ -1,0 +1,15 @@
+<library path="src">
+  <class name="HuskyPanda" type="rqt_dyros.husky_panda.HuskyPanda" base_class_type="rqt_gui_py::Plugin">
+    <description>
+      GUI for command sending
+    </description>
+    <qtgui>
+      <group>
+        <label>Robot Tools</label>
+      </group>
+      <label>Husky Panda Navigation</label>
+      <icon type="theme">system-run</icon>
+      <statustip>GUI for sending command to the husky panda mobile manipulator.</statustip>
+    </qtgui>
+  </class>
+</library>

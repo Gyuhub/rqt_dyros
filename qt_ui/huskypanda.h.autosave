@@ -1,0 +1,33 @@
+#ifndef HUSKYPANDA_H
+#define HUSKYPANDA_H
+
+#include <QMainWindow>
+
+namespace Ui {
+class HuskyPanda;
+}
+
+class HuskyPanda : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    explicit HuskyPanda(QWidget *parent = 0);
+    ~HuskyPanda();
+
+private slots:
+    void on_pushButton_clicked();
+    
+    void on_pushButton_2_clicked();
+    
+    void on_doubleSpinBox_2_valueChanged(double arg1);
+    
+    void on_doubleSpinBox_3_valueChanged(double arg1);
+    
+    void on_doubleSpinBox_valueChanged(double arg1);
+    
+private:
+    Ui::HuskyPanda *ui;
+};
+
+#endif // HUSKYPANDA_H
