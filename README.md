@@ -3,4 +3,4 @@
 
 ### Image
 ---
-![rqt_dyros](.rqt_dyros.png)
+![rqt_dyros](./rqt_dyros.png)
