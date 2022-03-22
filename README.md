@@ -17,7 +17,7 @@ source ~/$(your workspace)/devel/setup.bash
 ```
 rosrun rqt_dyros rqt_dyros
 ```
-<!> If your plugin does not show up under the Plugins menu when you launch rqt, you may need to run:
+⚠️ If your plugin does not show up under the Plugins menu when you launch rqt, you may need to run:
 ```
 rqt --force-discover
 ```
