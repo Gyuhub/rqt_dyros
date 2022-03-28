@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>391</width>
-    <height>302</height>
+    <width>586</width>
+    <height>438</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,14 +19,20 @@
      <rect>
       <x>30</x>
       <y>20</y>
-      <width>331</width>
+      <width>521</width>
       <height>91</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="title">
      <string>Command</string>
     </property>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="reachPushButton">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -39,10 +45,23 @@
       <string>Reach</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="openPushButton">
      <property name="geometry">
       <rect>
-       <x>190</x>
+       <x>380</x>
+       <y>30</y>
+       <width>121</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Open</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="stopPushButton">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
        <y>30</y>
        <width>121</width>
        <height>51</height>
@@ -57,55 +76,114 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>140</y>
-      <width>331</width>
-      <height>81</height>
+      <y>130</y>
+      <width>521</width>
+      <height>51</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <property name="spacing">
       <number>6</number>
      </property>
-     <property name="rightMargin">
-      <number>0</number>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMaximumSize</enum>
      </property>
      <item alignment="Qt::AlignHCenter">
-      <widget class="QLabel" name="label_3">
+      <widget class="QLabel" name="xLabel">
        <property name="text">
         <string>x:</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
+      <widget class="QDoubleSpinBox" name="xDoubleSpinBox">
        <property name="minimum">
         <double>-100.000000000000000</double>
        </property>
       </widget>
      </item>
      <item alignment="Qt::AlignHCenter">
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="yLabel">
        <property name="text">
         <string>y:</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QDoubleSpinBox" name="doubleSpinBox_3">
+      <widget class="QDoubleSpinBox" name="yDoubleSpinBox">
        <property name="minimum">
         <double>0.000000000000000</double>
        </property>
       </widget>
      </item>
      <item alignment="Qt::AlignHCenter">
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="zLabel">
        <property name="text">
         <string>z:</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
+      <widget class="QDoubleSpinBox" name="zDoubleSpinBox"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>180</y>
+      <width>521</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <property name="spacing">
+      <number>6</number>
+     </property>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMaximumSize</enum>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="rollLabel">
+       <property name="text">
+        <string>roll:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="rollDoubleSpinBox">
+       <property name="minimum">
+        <double>-100.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+      <widget class="QLabel" name="pitchLabel">
+       <property name="text">
+        <string>pitch:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="pitchDoubleSpinBox">
+       <property name="minimum">
+        <double>0.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="yawLabel">
+       <property name="text">
+        <string>yaw:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="yawDoubleSpinBox"/>
      </item>
     </layout>
    </widget>
@@ -115,7 +193,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>391</width>
+     <width>586</width>
      <height>22</height>
     </rect>
    </property>
